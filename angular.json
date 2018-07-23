@@ -123,5 +123,10 @@
       }
     }
   },
-  "defaultProject": "mean-app"
+  "defaultProject": "mean-app",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
