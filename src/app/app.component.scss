@@ -1,1 +1,6 @@
+@import '../assets/styles/variables.scss';
 
+main {
+    color: $font-primary-color;
+    font-family: $font-main;
+}

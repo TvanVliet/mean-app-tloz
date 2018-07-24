@@ -1,0 +1,29 @@
+@import '../../assets/styles/variables.scss';
+
+mat-toolbar {
+    height: 10%;
+}
+
+#header-logo {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: $font-primary-color;
+    font-family: $font-main;
+    font-size: $font-primary-size;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    padding: 30px;
+}
+
+.space-between {
+    flex: 1 1 auto;
+}
