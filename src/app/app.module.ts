@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import { 
+  MatToolbarModule,
+  MatCardModule, 
+  MatInputModule,
+  MatExpansionModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
@@ -14,6 +19,10 @@ import { PostCreateComponent } from './posts/post-create/post-create.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    MatCardModule,
+    MatExpansionModule,
+    MatInputModule,
     MatToolbarModule
   ],
   providers: [],

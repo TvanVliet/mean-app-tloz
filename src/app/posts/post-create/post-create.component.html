@@ -1,3 +1,13 @@
-<p>
-  post-create works!
-</p>
+<mat-card>
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input matInput type="text" name="title" [ngModel]="post.title" required minlength="3" placeholder="Title">
+      <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error>
+    </mat-form-field>
+    <mat-form-field id="text-area">
+      <textarea matInput rows="4" name="content" [ngModel]="post.content" required minlength="5" placeholder="What do you want to say?">
+        </textarea>
+      <mat-error *ngIf="content.invalid">Please enter content.</mat-error>
+    </mat-form-field>
+  </form>
+</mat-card>
