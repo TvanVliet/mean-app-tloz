@@ -1,5 +1,9 @@
 @import '../../../assets/styles/variables.scss';
 
+mat-accordion mat-expansion-panel {
+    background-color: black;
+}
+
 :host {
     display: block;
     margin-top: 1rem;
@@ -7,4 +11,20 @@
 
 .info-text {
     text-align: center;
+}
+
+h4 {
+    color: $font-primary-color;
+}
+
+p {
+    color: $font-primary-color;
+}
+
+#edit-button {
+    color: $font-primary-color;
+}
+
+#delete-button {
+    color: red;
 }
