@@ -24,7 +24,8 @@ export class PostCreateComponent {
       if (paramMap.has('postId')) {
         this.mode = 'edit';
         this.postId = paramMap.get('postId');
-        this.post = this.postsService.getPost(this.postId);
+        this.postsService.getPost(this.postId).subscribe(postData =>
+        this.post = { id: postData._id, title: postData.title, content: postData.content });
       } else {
         this.mode = 'create';
         this.postId = null;
@@ -32,11 +33,15 @@ export class PostCreateComponent {
     });
   }
 
-  onAddPost(form: NgForm) {
+  onSavePost(form: NgForm) {
     if (form.invalid) {
       return;
     }
+    if (this.mode === 'create') {
     this.postsService.addPost(form.value.title, form.value.content);
+    } else {
+      this.postsService.updatePost(this.postId, form.value.title, form.value.content);
+    }
     form.resetForm();
   }
 }
