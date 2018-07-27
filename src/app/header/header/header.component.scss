@@ -17,11 +17,13 @@ a {
 
 ul {
     display: flex;
+    justify-content: flex-end;
     list-style: none;
+    width: 100%;
 }
 
 ul li {
-    padding: 30px;
+    padding: 2%;
 }
 
 .space-between {
