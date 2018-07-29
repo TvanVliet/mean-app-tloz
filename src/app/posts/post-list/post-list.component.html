@@ -1,13 +1,23 @@
-<mat-accordion multi="true" *ngIf="posts.length > 0">
-  <mat-expansion-panel *ngFor="let post of posts">
-    <mat-expansion-panel-header>
-      <h4>{{ post.title }}</h4>
-    </mat-expansion-panel-header>
-    <p>{{ post.content }}</p>
-    <mat-action-row>
+<div class="container">
+  <mat-card class="post-card" *ngFor="let post of posts">
+    <mat-card-header>
+      <div mat-card-avatar class="avatar-image"></div>
+      <mat-card-title>{{ post.title }}</mat-card-title>
+      <mat-card-subtitle>
+        <p>test</p>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{uploadedPostImage}}" alt="Zelda-World">
+    <mat-card-content>
+      <p>
+        {{ post.content }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
       <a id="edit-button" mat-button [routerLink]="['/edit', post.id]">Edit</a>
       <button id="delete-button" mat-button (click)="onDelete(post.id)">Delete</button>
-    </mat-action-row>
-  </mat-expansion-panel>
-</mat-accordion>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
 <p class="info-text mat-body-1" *ngIf="posts.length <= 0"> No posts added yet! </p>

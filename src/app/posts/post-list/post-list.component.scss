@@ -1,24 +1,39 @@
 @import '../../../assets/styles/variables.scss';
 
-mat-accordion mat-expansion-panel {
-    background-color: black;
-}
-
-:host {
-    display: block;
-    margin-top: 1rem;
-}
-
-.info-text {
-    text-align: center;
-}
-
-h4 {
+mat-card-title {
     color: $font-primary-color;
+}
+
+mat-card-subtitle p {
+    color: white;
 }
 
 p {
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.post-card {
+    background-color: black;
+    margin: 0.5%;
+    min-width: 350px;
+    width: 45.5%;
+}
+
+.avatar-image {
+    background-image: url('../../../assets/images/link-shooting-header-img.png');
+    background-size: cover;
+  }
+
+.info-text {
     color: $font-primary-color;
+    text-align: center;
 }
 
 #edit-button {

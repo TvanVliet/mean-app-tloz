@@ -11,19 +11,22 @@ import { PostsService } from "../posts.service";
 })
 
 export class PostListComponent implements OnInit, OnDestroy {
+    public uploadedPostImage: string;
     posts: Post[] = [];
     private postsSub: Subscription;
 
     constructor(public postsService: PostsService) {
-        
+
     }
 
     ngOnInit() {
         this.postsService.getPosts();
         this.postsSub = this.postsService.getPostUpdateListener()
-        .subscribe((posts: Post[]) => {
-            this.posts = posts;
-        });
+            .subscribe((posts: Post[]) => {
+                this.posts = posts;
+            });
+
+        this.uploadedPostImage = "../../../assets/images/tloz-botw-world.jpg";
     }
 
     onDelete(postId: string) {
