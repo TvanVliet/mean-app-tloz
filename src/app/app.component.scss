@@ -1,9 +1,13 @@
 @import '../assets/styles/variables.scss';
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 main {
     color: $font-primary-color;
     font-family: $font-main;
-    margin: 1rem auto;
+    margin: 0.5rem auto;
     width: 100%;
+}
+
+:host {
+    background-color: black;
+    display: block;
 }

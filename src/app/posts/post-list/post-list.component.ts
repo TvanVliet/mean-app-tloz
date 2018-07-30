@@ -12,6 +12,7 @@ import { PostsService } from "../posts.service";
 
 export class PostListComponent implements OnInit, OnDestroy {
     public uploadedPostImage: string;
+    public username: string;
     posts: Post[] = [];
     private postsSub: Subscription;
 
@@ -27,6 +28,7 @@ export class PostListComponent implements OnInit, OnDestroy {
             });
 
         this.uploadedPostImage = "../../../assets/images/tloz-botw-world.jpg";
+        this.username = "Zelda Fan"
     }
 
     onDelete(postId: string) {

@@ -21,9 +21,10 @@ p {
 
 .post-card {
     background-color: black;
+    border: 1px $font-primary-color solid;
     margin: 0.5%;
     min-width: 350px;
-    width: 45.5%;
+    width: 45.3%;
 }
 
 .avatar-image {
